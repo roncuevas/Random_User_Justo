@@ -18,10 +18,10 @@ struct UserDataModel: Decodable {
     let phone: String
     let picture: Picture
     let login: Login
-    //let registered: Dob
-    //let cell: String
-    //let id: ID
-    //let nat: String
+    let registered: Dob
+    let cell: String
+    let id: ID
+    let nat: String
 }
 
 // MARK: - Dob
@@ -39,7 +39,7 @@ struct ID: Codable {
 struct Location: Codable {
     let street: Street
     let city, state, country: String
-    //let postcode: Int   Parameter eliminated because API returns Int and String types randomly causing conflicts
+//    let postcode: Int   Parameter eliminated because API returns Int and String types randomly causing conflicts
     let coordinates: Coordinates
     let timezone: Timezone
 }

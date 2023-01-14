@@ -11,7 +11,7 @@ import Foundation
 
 struct UserResponseDataModel: Decodable {
     
-    let user: [UserDataModel]
+    private let user: [UserDataModel]
     
     enum CodingKeys: String, CodingKey {
         case results

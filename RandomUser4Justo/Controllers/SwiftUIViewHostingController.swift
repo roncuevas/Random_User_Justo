@@ -15,7 +15,7 @@ class SwiftUIViewHostingController: UIHostingController<SplashScreenView> {
         super.init(coder: aDecoder, rootView: SplashScreenView())
     }
     
-    //When splashScreen finished loading then wait 2.5 seconds while the animation finishes to present the
+    // When splashScreen finished loading then wait 2.5 seconds while the animation finishes to present the
     override func viewDidLoad() {
         super.viewDidLoad()
         homeViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNavigationController")

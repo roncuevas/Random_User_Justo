@@ -73,6 +73,5 @@ class CoreDataManager {
         } catch let error {
             print("Error saving data: \(error)")
         }
-        
     }
 }

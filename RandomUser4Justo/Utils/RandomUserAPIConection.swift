@@ -14,12 +14,10 @@ enum Errors: Error {
 class RandomUserAPIConection {
     
     private var users: [UserDataModel] = []
-    let url: String = "https://randomuser.me/api/"
+    private let url: String = "https://randomuser.me/api/"
     
     func getData()  -> [UserDataModel] {
-        
         guard let url = URL(string: url) else {return []}
-        
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data else { return }
             do {
@@ -29,7 +27,6 @@ class RandomUserAPIConection {
                 print("Error trying to get JSON data from API \(error)")
             }
         }.resume()
-        
         return self.users
     }
 }
